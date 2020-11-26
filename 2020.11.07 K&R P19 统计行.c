@@ -1,5 +1,6 @@
 #include<stdio.h>
 //无法在CMD中正常运行
+//2020.11.26：CMD中 Ctrl+Z 作为 EOF
 int main()
 {
 	int c, nl;
