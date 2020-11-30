@@ -24,5 +24,6 @@ int main()
 		}
 		printf("\n");
 	}
+	free (triangle);								//释放triangle所用的内存空间
 	return 0;
 }
