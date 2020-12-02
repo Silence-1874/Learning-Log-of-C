@@ -17,10 +17,8 @@ int main()
 		p = p->next;	
 	}
 
-	p = Head->next;			//p读取头结点中的头指针，从头开始遍历
-	while (p) {				//读到结尾前循环输出
+	for(p = Head->next; p; p = p->next) {			//遍历链表
 		printf("%d\n", p->data);
-		p = p->next;
 	}
 	return 0;
 }
