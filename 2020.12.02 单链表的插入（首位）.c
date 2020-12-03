@@ -6,10 +6,10 @@ int main()
 		int data;
 		struct Node* next;
 	}Node;
-	Node* Head = (Node*)malloc(sizeof(Node*));
+	Node* Head = (Node*)malloc(sizeof(Node));
 	Node* p = Head;
 	for (int i = 1; i <= 10; i++) {
-		Node* a = (Node*)malloc(sizeof(Node*));
+		Node* a = (Node*)malloc(sizeof(Node));
 		a->data = i;
 		a->next = NULL;
 		p->next = a;
@@ -18,7 +18,7 @@ int main()
 	printf("请输入要插到首位的元素： ");
 	int x;
 	scanf_s("%d", &x);
-	Node* NewHead = (Node*)malloc(sizeof(Node*));
+	Node* NewHead = (Node*)malloc(sizeof(Node));
 	p = Head;
 	p->data = x;
 	p = NewHead;
