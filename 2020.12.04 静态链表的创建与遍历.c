@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include<stdlib.h>
 #define MAXSIZE 100			//保证空间足够大
 int main()
 {
