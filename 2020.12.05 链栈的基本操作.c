@@ -13,7 +13,7 @@ int main()	//链栈实际上就是一个只能采用头插法插入或删除数�
 		printf("请输入要压入的元素: ");
 		int x;
 		scanf_s("%d", &x);
-		if (top == NULL) {	
+		if (top == NULL) {			//必须采用头插法,一般不需要头结点
 			stack* a = (stack*)malloc(sizeof(stack));
 			a->data = x;	
 			a->next = NULL;			
@@ -28,11 +28,12 @@ int main()	//链栈实际上就是一个只能采用头插法插入或删除数�
 		scanf_s("%d", &bool);
 	}
 
-	/*printf("当前栈内元素为\n");
-	for (; top; top = top->next) {
+	stack* Head = top;
+	printf("当前栈内元素为\n");
+	for (top = Head; top; top = top->next) {
 		printf("%d\n", top->data);
-	}*/
-
+	}
+	top = Head;
 	printf("输入1开始出栈，输入0结束操作: ");
 	scanf_s("%d", &bool);
 	while (bool) {
@@ -41,7 +42,7 @@ int main()	//链栈实际上就是一个只能采用头插法插入或删除数�
 			break;
 		}
 		else {
-			printf("“%d”出栈！\n", top->data);	//弹出栈顶元素,并将栈顶标记向前移一位
+			printf("“%d”出栈！\n", top->data);
 			stack* p;
 			p = top;
 			top = p->next;
