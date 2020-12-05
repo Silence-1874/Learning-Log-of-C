@@ -36,8 +36,7 @@ int main()
 			printf("栈空！\n");
 			break;
 		} else {
-			printf("“%d”出栈！\n", stack.data[stack.top]);	//弹出栈顶元素
-			stack.top--;									//并将栈顶标记向前移一位
+			printf("“%d”出栈！\n", stack.data[stack.top--]);	//弹出栈顶元素,并将栈顶标记向前移一位				
 		}
 		printf("输入1继续出栈，输入0结束出栈: ");
 		scanf_s("%d", &bool);
