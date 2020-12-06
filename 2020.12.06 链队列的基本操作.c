@@ -43,7 +43,7 @@ int main()
 		} else {									//队头元素出队
 			Head = Front->next;
 			Front->next = Front->next->next;
-			printf("%d出队！\n", Head->data);
+			printf("“%d”出队！\n", Head->data);
 			free(Head);
 		}
 		
