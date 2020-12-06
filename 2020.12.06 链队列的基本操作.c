@@ -47,7 +47,7 @@ int main()
 			free(Head);
 		}
 		
-		printf("输入1继续出队，出入0结束入队： ");
+		printf("输入1继续出队，出入0结束出队： ");
 		scanf_s("%d", &bool);
 	}
 
