@@ -7,11 +7,12 @@ int main()
 		struct BiTNode* Lchild;		//左孩子指针
 		struct BiTNode* Rchild;		//右孩子指针
 	}BiTree;
-	BiTree* p = (BiTree*)malloc(sizeof(BiTree));	//创建根节点
-	p->data = 'A';		
-	p->Lchild = (BiTree*)malloc(sizeof(BiTree));
-	p->Lchild->data = 'B';
-	p->Rchild = (BiTree*)malloc(sizeof(BiTree));
-	p->Rchild->data = 'C';
+	BiTree* T = (BiTree*)malloc(sizeof(BiTree));	//创建根节点
+	T->data = 'A';		
+	T->Lchild = (BiTree*)malloc(sizeof(BiTree));
+	T->Lchild->data = 'B';
+	T->Rchild = (BiTree*)malloc(sizeof(BiTree));
+	T->Rchild->data = 'C';
 	//以此类推
+	return 0;
 }
