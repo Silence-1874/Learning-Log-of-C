@@ -14,7 +14,8 @@ int main()
 	InOrderTraverse(Tree);
 	return 0;
 }
-void InOrderTraverse(BiTree T) {	//中序遍历：左→根→右
+void InOrderTraverse(BiTree T) //中序遍历：左→根→右
+{
 	if (T) {
 		InOrderTraverse(T->Lchild);
 		printf("%c", T->data);

@@ -14,8 +14,8 @@ int main()
 	PostOrderTraverse(Tree);
 	return 0;
 }
-void PostOrderTraverse(BiTree T) {	//后序遍历：左→右→根
-	if (T) {
+void PostOrderTraverse(BiTree T) //后序遍历：左→右→根
+{	if (T) {
 		PostOrderTraverse(T->Lchild);
 		PostOrderTraverse(T->Rchild);
 		printf("%c", T->data);

@@ -14,7 +14,8 @@ int main()
 	PreOrderTraverse(Tree);
 	return 0;
 }
-void PreOrderTraverse(BiTree T) {	//先序遍历：根→左→右
+void PreOrderTraverse(BiTree T) //先序遍历：根→左→右
+{
 	if (T) {
 		printf("%c", T->data);
 		PreOrderTraverse(T->Lchild);//访问该结点的左孩子
