@@ -1,4 +1,3 @@
-//二叉树的先序遍历（递归）
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct BiTNode {
