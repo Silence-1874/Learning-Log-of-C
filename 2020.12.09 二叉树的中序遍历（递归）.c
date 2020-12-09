@@ -6,19 +6,19 @@ typedef struct BiTNode {
 	struct BiTNode* Rchild;
 }BiTNode, * BiTree;
 void CreateBiTree(BiTree*);
-void PreOrderTraverse(BiTree);
+void InOrderTraverse(BiTree);
 int main()
 {
 	BiTree Tree;
 	CreateBiTree(&Tree);
-	PreOrderTraverse(Tree);
+	InOrderTraverse(Tree);
 	return 0;
 }
-void PreOrderTraverse(BiTree T) {	//中序遍历：左→根→右
+void InOrderTraverse(BiTree T) {	//中序遍历：左→根→右
 	if (T) {
-		PreOrderTraverse(T->Lchild);
+		InOrderTraverse(T->Lchild);
 		printf("%c", T->data);
-		PreOrderTraverse(T->Rchild);
+		InOrderTraverse(T->Rchild);
 	}
 	else putchar('#');
 	return;
