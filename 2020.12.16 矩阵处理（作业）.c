@@ -16,6 +16,7 @@ int main()
 	printf("处理后的矩阵为：\n");
 	output(m);		//调用output函数输出处理后的矩阵
 }
+
 void f(int* m)
 {
 	int i, j;
@@ -91,6 +92,7 @@ void f(int* m)
 	*(m + mini * N + minj) = *(m + (N - 1) * N + N - 1);
 	*(m + (N - 1) * N + N - 1) = t;
 }
+
 void input(int* m)
 {
 	printf("请输入矩阵的%d个元素：\n", N * N);
