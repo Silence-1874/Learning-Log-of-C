@@ -1,16 +1,18 @@
 #include <stdio.h>
-int mystrlen(char* s)
+#define ALLOCSIZE 10000
+static char allocbuf[ALLOCSIZE];
+static char *allocp=allocbuf;
+char* alloc(int n)
 {
-	int cnt=0;
-	while ( s[cnt]!= '\0')
+	if (allocbuf + ALLOCSIZE - allocp >= n)
 	{
-		cnt ++;
+		allocp += n;
+		return allocp - n;
 	}
-	return cnt;
+	else return 0;
 }
-int main()
+void  afree(char* p)
 {
-	char s[] = "我有几个字符?";
-	printf("%d", mystrlen(s));
-	return 0;
+	if (p >= allocbuf && p < allocbuf + ALLOCSIZE)
+		allocp = p;
 }
