@@ -28,3 +28,11 @@ int main()
 
 	return 0;
 }
+
+void lstrcpy(int n, char* str, char* ans)
+{
+	int i, j;
+	for (i = n - 1, j = 0; *(str+i)!='\0'; i++, j++) {
+		*(ans + j) = *(str + i);				//只要str[i]不为字符串结束符，则继续进行复制
+	}
+}
