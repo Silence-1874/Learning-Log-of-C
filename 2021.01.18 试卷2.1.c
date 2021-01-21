@@ -35,4 +35,5 @@ int main()
 			printf("input error!\n");
 		}
 	}
+	return 0;
 }
